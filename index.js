@@ -9,8 +9,12 @@ function yogaData() {
 function select(item) {
     let sanskrit = document.getElementById("sanskrit");
     let english = document.getElementById("english");
-    let right = document.getElementById('right');
+    let image = document.getElementById('image');
     console.log(item);
+
+    sanskrit.textContent = item.sanskrit_name;
+    english.textContent = item.english_name;
+    image.src = item.img_url;
 
 
 }

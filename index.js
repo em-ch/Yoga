@@ -1,4 +1,7 @@
 
+
+
+
 //fetch data
 function yogaData() {
     fetch('https://raw.githubusercontent.com/rebeccaestes/yoga_api/master/yoga_api.json')
@@ -10,7 +13,8 @@ function select(item) {
     let sanskrit = document.getElementById("sanskrit");
     let english = document.getElementById("english");
     let image = document.getElementById('image');
-    console.log(item);
+    document.getElementsByClassName("landing")[0].classList.add("is-hidden");
+    document.getElementsByClassName("container")[0].classList.remove("is-hidden");
 
     sanskrit.textContent = item.sanskrit_name;
     english.textContent = item.english_name;
@@ -19,7 +23,7 @@ function select(item) {
 
 }
 
-
+//sideBar
 function renderList(yogaObj) {
     const sideBar = document.getElementById('sidebar');
     for (let i = 0; i < yogaObj.length; i++) {

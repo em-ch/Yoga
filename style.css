@@ -1,7 +1,14 @@
-#intro {
+#header {
 	background-color: aqua;
-	height: 10vh;
+	height: 15vh;
 	width: 100%;
+	font-family: "Abril Fatface", cursive;
+	font-size: 25px;
+	text-align: center;
+}
+
+#title {
+	padding: 10px;
 }
 
 #sidebar {
@@ -11,9 +18,23 @@
 	position: absolute;
 	z-index: 1;
 	overflow: auto;
+	background-color: aliceblue;
 }
 
-#container {
+.pose {
+	padding: 3px 7px;
+	font-size: 2.5vh;
+}
+
+.landing {
+	margin-left: 220px;
+	font-family: "Playfair Display", serif;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.container {
 	display: flex;
 	height: 100vh;
 	margin-left: 220px;
@@ -41,4 +62,8 @@
 #image {
 	border: 3px solid black;
 	margin-top: 5%;
+}
+
+.is-hidden {
+	display: none;
 }

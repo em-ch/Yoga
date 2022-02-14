@@ -4,7 +4,7 @@
 }
 
 #header {
-	/* background-color: aqua; */
+	background-color: rgba(180, 180, 255, 0.2);
 	height: 14vh;
 	width: 100%;
 	font-family: "Abril Fatface", cursive;
@@ -42,6 +42,10 @@
 	margin: 0;
 }
 
+.active {
+	background-color: aliceblue;
+}
+
 /* rgb(248, 241, 232) */
 .landing {
 	margin-left: 210px;
@@ -59,39 +63,59 @@
 }
 
 .intro {
-	line-height: 2em;
+	line-height: 1.8em;
 	max-width: 70%;
 }
 
 .container {
-	display: flex;
 	height: 100vh;
 	margin-left: 210px;
 	background-color: rgb(247, 241, 230);
-	border: 3px solid black;
+
+	text-align: center;
+}
+
+#upper {
+	display: flex;
+	height: 40vh;
+	margin-bottom: 1px;
 }
 
 #left {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	border: 3px solid black;
-	width: 100%;
+	/* justify-content: space-around; */
+	padding-top: 50px;
+	width: 95%;
+	font-family: "DM Serif Display", serif;
+	font-size: 38px;
+	height: 100px;
+	line-height: 1.7em;
 }
 
-.name {
-	border: 3px solid black;
+/* .name {
+	font-family: "DM Serif Display", serif;
+	font-size: 40px;
 	height: 100px;
-}
+} */
 
 #right {
-	border: 3px solid black;
+	/* height: 30%; */
 	width: 100%;
+	text-align: center;
 }
 
 #image {
-	border: 3px solid black;
 	margin-top: 5%;
+	height: 33vh;
+	box-shadow: 5px 5px 10px 10px rgba(20, 20, 20, 0.1);
+	width: 28vw;
+}
+
+#video {
+	width: 700px;
+	height: 60vh;
+	/* margin-top: 10px; */
 }
 
 .is-hidden {

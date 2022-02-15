@@ -25,7 +25,7 @@ function renderList(yogaObj) {
 }
 
 function select(item,e) {
-    youtubeData(item.sanskrit_name, item.english_name);
+    youtubeData(item.sanskrit_name,item.english_name);
     
     let selected = document.getElementsByClassName("active")[0];
     if (selected) {
@@ -44,14 +44,22 @@ function select(item,e) {
 //fetch video from youtube
 const youtube_api_key = "AIzaSyCUgaswXyglCQpmRzLcNnAFWMZfRJ9oG5I";
 function youtubeData(sanskrit_name, english_name) {
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=how+to+do+${sanskrit_name}+${english_name}&maxResults=1&key=${youtube_api_key}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=how+to+do+${sanskrit_name}+${english_name}&maxResults=2&key=${youtube_api_key}`)
     .then(response => response.json())
-    .then(videoResult => insertVideo(videoResult.items[0]));
+    .then(videoResult => insertVideo(videoResult, english_name));
+
+    console.log(english_name)
 }
 
-function insertVideo(videoItem) {
+function insertVideo(videoResult, english_name) {
     let video = document.getElementById('video');
-    video.src = `https://www.youtube.com/embed/${videoItem.id.videoId}`;
+    if (english_name == "Bridge" || english_name == "Pigeon" || english_name == "Crescent Moon") {
+        video.src = video.src = `https://www.youtube.com/embed/${videoResult.items[1].id.videoId}`;
+    } else {
+        video.src = `https://www.youtube.com/embed/${videoResult.items[0].id.videoId}`;
+    }
+    console.log(english_name);
+    console.log(videoResult);
     console.log(video.src);
 }
 
